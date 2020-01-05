@@ -1,0 +1,23 @@
+<!-- (After we retire the 'jade' view  )  We use this 'Angular' view-->
+  <h1><b>CRUD functionality.</b></h1>
+  <p><i>(Create, Read, Update, Delete)</i></p>
+  <h2><i>My First MEAN Stack app</i></h2>
+  <p>
+    <!-- Note that you should prefix the links in your Angular application with '/#'. This is used for compatibility with older browsers that don’t support single-page applications (SPA). -->
+    <a href="/#/add-video">Add a Video</a>
+  </p>
+  <ul>
+    <!-- The value of 'ng-repeat' is an expression similar to a 'foreach' expression in JavaScript -->
+    <!-- 'videos' is  the property we set in the '$scope' in the controller. -->
+    <!-- We’re using a Angular binding expression to render a dynamic URL based on the ID of the video. Again, note that the URL is prefixed with /# for compatibility with older browsers. -->
+    <li ng-repeat='video in videos'>
+      <a href="/#/video/{{video._id}}">
+        {{video.title}}</a><br />
+        <b>Description:</b>
+         {{video.description}}
+         <br />
+         <a href="/#/video/delete/{{video._id}}">
+          <i class="far fa-trash-alt"></i>
+        </a>
+      </li>
+  </ul>

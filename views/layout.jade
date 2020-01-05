@@ -1,0 +1,24 @@
+doctype html
+//- We add the ng-app attribute to our HTML element. When the Angular script is loaded, it’ll look for this attribute in the DOM and if it finds it, it’ll hook itself into your application.
+html(ng-app='Vidzy')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    //-Bootstrap cdn. 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    script(src="https://kit.fontawesome.com/74f841e915.js" crossorigin="anonymous")
+
+    //- Adding 'Angular' scripts to our app.
+    //- Main 'Angular' framework.
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
+    //-Is used to consuming RESTful APIs. 
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
+    //- Is used for routing, with routing we define what the user should see as they navigate through the app.
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
+    //- Referencing our  JS code .
+    script(src='/javascripts/vidzy.js')
+  body
+    block content

@@ -1,0 +1,14 @@
+<h1>Add a Video Please</h1>
+<form>
+  <div class="form-group">
+    <label>Title</label>
+    <!-- The 'ng-model' attribute is another directive that we use for data binding. With this, we tell 'Angular' that anytime the value in our input fields is changed, it should automatically update the referenced property of '$scope' -->
+    <input class="form-control" ng-model="video.title" ></input>
+  </div>
+  <div>
+    <label class="form-group">Description</label>
+    <textarea class="form-control" ng-model="video.description" ></textarea>
+  </div>
+  <!-- The 'ng-click' attribute is yet another 'Angular' directive that we use to handle the 'click' event of HTML elements. With this directive, we’re telling 'Angular' that if the user clicks this button, it should execute the 'save' method on the '$scope', which we defined in the controller -->
+  <input type="button" class="btn btn-primary" value="save" ng-click="save()" ></input>
+</form>
